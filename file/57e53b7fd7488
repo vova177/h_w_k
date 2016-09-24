@@ -1,0 +1,31 @@
+#include<iostream>
+#include<cmath>
+
+#define E pow(10,-3)
+
+using namespace std;
+
+
+int main(){
+
+    float x = 1.3;
+	float y = 0.34;
+	float z = 0.23;
+	
+	float _x = x*E;
+	float _y = y*E;
+	float _z = z*E;
+
+	float U = (pow(x, 2) - y) - cos(x+z);
+	cout << U << endl;
+
+	float U_x = (2 * x*cos(x + z) + (sin(x + z) * 1)*(pow(x, 2) - y)) / pow(cos(x + y), 2);
+    float U_y = -1 / cos(x + z);
+	float U_z = sin(x + z)*(pow(x, 2) - y) / pow(cos(x + z), 2);
+	float function = abs(U_x)*_x + abs(U_y)*_y + abs(U_z)*_z;
+	/*cout << U_x<<endl;
+	cout << U_y<<endl;
+	cout << U_z<<endl;*/
+	
+	cout << function<<endl;
+}

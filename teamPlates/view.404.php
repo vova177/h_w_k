@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: vova
- * Date: 23.09.16
- * Time: 17:56
+ * Date: 25.09.16
+ * Time: 18:28
  */
 
-echo'<br/>admin';
+echo'404 Not Fond';

@@ -5,21 +5,21 @@
  * Date: 21.09.16
  * Time: 17:39
  */
+session_start();
 
-//setcookie('user','vova',time()+3600,"/");
+//config site
 
-//echo $_COOKIE['user'];
+include'config.php';
+//include"teamPlates/header.php";
 
-//sesion_start();
+include'check_user.php';
 
-//echo ini_get("date.timezone");
-
-//echo date('d D Y  H:i:s', time());
-//exit();
-
-define("FILE_DIRECTORY",'database/file.txt');
+define("FILE_DIRECTORY_MESSAGE",'database/file.txt');
+define("FILE_DIRECTORY_FILE_UPLOAD",'database/form2.txt');
 
 include'function.php';
+
+include 'routing.php';
 
 include'control.php';
 

@@ -29,7 +29,7 @@
 
        <?php
 
-       foreach( $message as $val ) {
+       foreach( $data['message'] as $val ) {
            echo $val['name'].'<br/>';
            echo $val['surname'].'<br/>';
            echo $val['email'].'<br/>';

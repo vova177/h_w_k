@@ -66,3 +66,18 @@ function messageFormat($array){
     }
     return $array;
 }
+
+function view($name_view, $data =[]){
+    include"teamPlates/header.php";
+    include"teamPlates/{$name_view}.php";
+}
+
+function file_delete($array){
+    foreach($array as $value){
+        $file_name=$value['file_ini'];
+   if(file_exists('file/'.$file_name)){
+       unlink('file/'.$file_name);
+   }
+    }
+
+}

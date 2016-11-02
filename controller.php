@@ -11,7 +11,7 @@ if(!$action){
     include "teamPlates/view.404.php";
 }
 
-include 'controller/main.controller.php';
-include 'controller/form2.controller.php';
-include 'controller/admin.controller.php';
-include 'controller/login.controller.php';
+include 'controller/login.php';
+include 'controller/user_account.php';
+include 'controller/balance_account.php';
+include 'controller/transaction.php';

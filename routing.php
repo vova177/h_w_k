@@ -1,17 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: vova
- * Date: 25.09.16
- * Time: 12:48
- */
-
-
 $routs=[
-    'view',
-    'admin',
-    'login',
-    'form2',
+  'account','login', 'balance', 'transaction',
 ];
 
 if( $_SERVER['REQUEST_URI'] != '/' ) {
@@ -29,11 +18,5 @@ if( $_SERVER['REQUEST_URI'] != '/' ) {
         $subAction = null;
     }
     } else {
-        $action = 'view';
-    }
-    if ($action == 'admin') {
-        if ($_SESSION['user_admin'] != 1) {
-            header('location: /login');
-            exit();
-        }
+        $action = 'login';
     }

@@ -1,7 +1,14 @@
 <table>
 <form method="post" action="">
-
-    <tr><td>Add new transaction: <input type="text" name="form[category_name]"></td></tr>
+    <tr><td>Add new transaction: <input list="hosting-plan" type="text"  name="form[category_name]">
+    <datalist id="hosting-plan">
+        <?php
+        foreach($arr as $value) {
+            echo '<option value=' . $value['name'].'>';
+        }
+            ?>
+    </datalist>
+        </td></tr>
     <tr><td>Price: <input type="text" name="form[price]"></td></tr>
     <tr><td>Description: <input type="text" name="form[descriptions]"></td></tr>
     <tr><td align="center"> <input type="submit" value="Ok"></td></tr>

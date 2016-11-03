@@ -7,11 +7,16 @@ if($action=="login") {
                 $_SESSION['user'] = $login_user[0]['id'];
                 $cookie = $login_user[0]['id'];
                 setcookie('user_id', md5($cookie), time() + 2 * 3600);
+                header('location: /account');
+                exit();
             }else {
                 $_SESSION['user'] = $login_user[0]['id'];
                 header('location: /account');
                 exit();
             }
+        }else{
+            header('location: /login');
+            exit();
         }
         }
     view('login');

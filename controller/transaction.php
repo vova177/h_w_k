@@ -11,5 +11,6 @@ if($action="transaction" && isset($_GET['balance_id'])){
           $all_transaction=get_transactions_byID($db, $_GET['balance_id']);
       }
   }
-    view('transaction', $all_transaction);
+   $categories=get_all_category($db);
+    view('transaction', $all_transaction, $categories);
 }

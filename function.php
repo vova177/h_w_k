@@ -67,7 +67,7 @@ function messageFormat($array){
     return $array;
 }
 
-function view($name_view, $data =[]){
+function view($name_view, $data =[], $arr=[]){
     include"teamPlates/header.php";
     include"teamPlates/{$name_view}.php";
 }

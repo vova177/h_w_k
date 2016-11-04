@@ -13,5 +13,4 @@ if(!$action){
 
 include 'controller/login.php';
 include 'controller/user_account.php';
-include 'controller/balance_account.php';
-include 'controller/transaction.php';
+
